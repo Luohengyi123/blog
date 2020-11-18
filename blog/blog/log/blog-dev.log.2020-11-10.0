@@ -1,0 +1,1179 @@
+2020-11-10 14:48:16.082  INFO 4628 --- [restartedMain] com.lhy.BlogApplication                  : Starting BlogApplication on DESKTOP-RU465GV with PID 4628 (F:\SpringBootStudy\others\1\Blog\blog\target\classes started by Sky in F:\SpringBootStudy\others\1\Blog\blog)
+2020-11-10 14:48:16.086  INFO 4628 --- [restartedMain] com.lhy.BlogApplication                  : The following profiles are active: dev
+2020-11-10 14:48:16.643  INFO 4628 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4a98bb4d: startup date [Tue Nov 10 14:48:16 CST 2020]; root of context hierarchy
+2020-11-10 14:48:20.588  INFO 4628 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2020-11-10 14:48:20.694  INFO 4628 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-10 14:48:20.695  INFO 4628 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-11-10 14:48:20.891  INFO 4628 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-10 14:48:20.891  INFO 4628 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4248 ms
+2020-11-10 14:48:21.167  INFO 4628 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-11-10 14:48:21.172  INFO 4628 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-11-10 14:48:21.173  INFO 4628 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-11-10 14:48:21.173  INFO 4628 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-11-10 14:48:21.174  INFO 4628 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-11-10 14:48:22.473  INFO 4628 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-11-10 14:48:22.525  INFO 4628 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-11-10 14:48:22.726  INFO 4628 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2020-11-10 14:48:22.728  INFO 4628 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-11-10 14:48:22.729  INFO 4628 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2020-11-10 14:48:22.800  INFO 4628 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-11-10 14:48:23.144  INFO 4628 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-11-10 14:48:23.794  INFO 4628 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2020-11-10 14:48:24.121  INFO 4628 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-10 14:48:24.852  INFO 4628 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-11-10 14:48:26.007  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4a98bb4d: startup date [Tue Nov 10 14:48:16 CST 2020]; root of context hierarchy
+2020-11-10 14:48:26.084  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/about],methods=[GET]}" onto public java.lang.String com.lhy.web.AboutShowController.about()
+2020-11-10 14:48:26.090  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 14:48:26.091  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.lhy.vo.BlogQuery,org.springframework.ui.Model)
+2020-11-10 14:48:26.091  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.BlogController.input(org.springframework.ui.Model)
+2020-11-10 14:48:26.091  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.BlogController.post(com.lhy.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
+2020-11-10 14:48:26.092  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 14:48:26.092  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.lhy.vo.BlogQuery,org.springframework.ui.Model)
+2020-11-10 14:48:26.095  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
+2020-11-10 14:48:26.095  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.LoginController.loginPage()
+2020-11-10 14:48:26.096  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 14:48:26.099  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 14:48:26.099  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TagController.input(org.springframework.ui.Model)
+2020-11-10 14:48:26.099  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.TagController.post(com.lhy.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 14:48:26.100  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-11-10 14:48:26.101  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.TagController.editPost(com.lhy.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 14:48:26.102  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 14:48:26.105  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 14:48:26.106  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-11-10 14:48:26.107  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TypeController.input(org.springframework.ui.Model)
+2020-11-10 14:48:26.107  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.TypeController.post(com.lhy.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 14:48:26.107  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.TypeController.editPost(com.lhy.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 14:48:26.108  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 14:48:26.113  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/archives],methods=[GET]}" onto public java.lang.String com.lhy.web.ArchiveShowController.archives(org.springframework.ui.Model)
+2020-11-10 14:48:26.115  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.lhy.web.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 14:48:26.115  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.lhy.web.CommentController.post(com.lhy.po.Comment,javax.servlet.http.HttpSession)
+2020-11-10 14:48:26.116  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.lhy.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-11-10 14:48:26.117  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.lhy.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
+2020-11-10 14:48:26.117  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.lhy.web.IndexController.newblogs(org.springframework.ui.Model)
+2020-11-10 14:48:26.118  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.lhy.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 14:48:26.119  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.lhy.web.TagShowController.tags(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
+2020-11-10 14:48:26.120  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.lhy.web.TypeShowController.types(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
+2020-11-10 14:48:26.122  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-11-10 14:48:26.122  INFO 4628 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-11-10 14:48:26.178  INFO 4628 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-11-10 14:48:26.179  INFO 4628 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-11-10 14:48:26.202  INFO 4628 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2020-11-10 14:48:26.233  INFO 4628 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-11-10 14:48:27.316  INFO 4628 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-10 14:48:27.398  INFO 4628 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-11-10 14:48:27.480  INFO 4628 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2020-11-10 14:48:27.492  INFO 4628 --- [restartedMain] com.lhy.BlogApplication                  : Started BlogApplication in 12.769 seconds (JVM running for 16.542)
+2020-11-10 14:48:43.474  INFO 4628 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-11-10 14:48:43.474  INFO 4628 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-11-10 14:48:43.517  INFO 4628 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 42 ms
+2020-11-10 14:48:43.579  INFO 4628 --- [http-nio-8080-exec-1] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-11-10 14:48:43.664  WARN 4628 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2020-11-10 14:48:43.677  WARN 4628 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2020-11-10 14:48:43.683  INFO 4628 --- [http-nio-8080-exec-1] com.lhy.aspect.LogAspect                 : Result : index
+2020-11-10 14:48:44.357  WARN 4628 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/typo.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:48:44.358  WARN 4628 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/animate.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:48:44.362  WARN 4628 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:48:44.363  WARN 4628 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:48:44.363  WARN 4628 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/me.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:48:44.366  WARN 4628 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:48:44.494  WARN 4628 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/qrcode/qrcode.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:48:44.494  WARN 4628 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:48:44.494  WARN 4628 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/waypoints/jquery.waypoints.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:48:44.497  WARN 4628 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/images/wechat.jpg] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:48:44.507  WARN 4628 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:48:44.583  WARN 4628 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:48:44.599  WARN 4628 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/qrcode/qrcode.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:48:44.618  WARN 4628 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/waypoints/jquery.waypoints.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:48:44.653  INFO 4628 --- [http-nio-8080-exec-2] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.IndexController.newblogs', args=[{}]}
+2020-11-10 14:48:44.657  INFO 4628 --- [http-nio-8080-exec-2] com.lhy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2020-11-10 14:49:04.765  INFO 4628 --- [http-nio-8080-exec-5] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2020-11-10 14:49:04.798 ERROR 4628 --- [http-nio-8080-exec-5] c.l.handler.ControllerExceptionHandler   : Requst URL : http://localhost:8080/tags/-1，Exception : {}
+
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at com.lhy.web.TagShowController.tags(TagShowController.java:31)
+	at com.lhy.web.TagShowController$$FastClassBySpringCGLIB$$2f8a999b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at com.lhy.web.TagShowController$$EnhancerBySpringCGLIB$$c59bde17.tags(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1457)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-11-10 14:49:04.798  WARN 4628 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved exception caused by Handler execution: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+2020-11-10 14:49:04.855  WARN 4628 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/typo.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:04.857  WARN 4628 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/animate.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:04.859  WARN 4628 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:04.859  WARN 4628 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:04.863  WARN 4628 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/me.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:04.863  WARN 4628 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/images/wechat.jpg] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:06.328  INFO 4628 --- [http-nio-8080-exec-3] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2020-11-10 14:49:06.333 ERROR 4628 --- [http-nio-8080-exec-3] c.l.handler.ControllerExceptionHandler   : Requst URL : http://localhost:8080/types/-1，Exception : {}
+
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at com.lhy.web.TypeShowController.types(TypeShowController.java:33)
+	at com.lhy.web.TypeShowController$$FastClassBySpringCGLIB$$1cd76c6b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at com.lhy.web.TypeShowController$$EnhancerBySpringCGLIB$$c1749887.types(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1457)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-11-10 14:49:06.334  WARN 4628 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved exception caused by Handler execution: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+2020-11-10 14:49:06.367  WARN 4628 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/typo.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:06.367  WARN 4628 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/animate.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:06.368  WARN 4628 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:06.369  WARN 4628 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/me.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:06.370  WARN 4628 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:06.391  WARN 4628 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/images/wechat.jpg] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:07.046  INFO 4628 --- [http-nio-8080-exec-9] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.ArchiveShowController.archives', args=[{}]}
+2020-11-10 14:49:07.056  INFO 4628 --- [http-nio-8080-exec-9] com.lhy.aspect.LogAspect                 : Result : archives
+2020-11-10 14:49:07.109  WARN 4628 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:07.109  WARN 4628 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/animate.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:07.110  WARN 4628 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:07.109  WARN 4628 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/typo.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:07.112  WARN 4628 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/me.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:07.133  WARN 4628 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:07.133  WARN 4628 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:07.133  WARN 4628 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/qrcode/qrcode.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:07.134  WARN 4628 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/waypoints/jquery.waypoints.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:07.134  WARN 4628 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/images/wechat.jpg] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:07.163  WARN 4628 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:07.168  WARN 4628 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:07.173  WARN 4628 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/qrcode/qrcode.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:07.178  WARN 4628 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/waypoints/jquery.waypoints.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:07.188  INFO 4628 --- [http-nio-8080-exec-8] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.IndexController.newblogs', args=[{}]}
+2020-11-10 14:49:07.190  INFO 4628 --- [http-nio-8080-exec-8] com.lhy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2020-11-10 14:49:08.304  INFO 4628 --- [http-nio-8080-exec-4] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/about', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.AboutShowController.about', args=[]}
+2020-11-10 14:49:08.307  INFO 4628 --- [http-nio-8080-exec-4] com.lhy.aspect.LogAspect                 : Result : about
+2020-11-10 14:49:08.363  WARN 4628 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/typo.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:08.363  WARN 4628 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:08.364  WARN 4628 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/animate.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:08.366  WARN 4628 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:08.368  WARN 4628 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/me.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:08.373  WARN 4628 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:08.384  WARN 4628 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:08.384  WARN 4628 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/qrcode/qrcode.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:08.386  WARN 4628 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/waypoints/jquery.waypoints.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:08.392  WARN 4628 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/images/wechat.jpg] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:08.438  WARN 4628 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:08.465  WARN 4628 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:08.471  WARN 4628 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/qrcode/qrcode.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:08.476  WARN 4628 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/waypoints/jquery.waypoints.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:49:08.491  INFO 4628 --- [http-nio-8080-exec-10] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.IndexController.newblogs', args=[{}]}
+2020-11-10 14:49:08.493  INFO 4628 --- [http-nio-8080-exec-10] com.lhy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2020-11-10 14:50:26.310  INFO 4628 --- [http-nio-8080-exec-6] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2020-11-10 14:50:26.314 ERROR 4628 --- [http-nio-8080-exec-6] c.l.handler.ControllerExceptionHandler   : Requst URL : http://localhost:8080/tags/-1，Exception : {}
+
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at com.lhy.web.TagShowController.tags(TagShowController.java:31)
+	at com.lhy.web.TagShowController$$FastClassBySpringCGLIB$$2f8a999b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at com.lhy.web.TagShowController$$EnhancerBySpringCGLIB$$c59bde17.tags(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1457)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-11-10 14:50:26.315  WARN 4628 --- [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved exception caused by Handler execution: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+2020-11-10 14:50:26.358  WARN 4628 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/typo.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:26.360  WARN 4628 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/animate.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:26.361  WARN 4628 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:26.362  WARN 4628 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:26.366  WARN 4628 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/me.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:26.368  WARN 4628 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/images/wechat.jpg] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:27.297  INFO 4628 --- [http-nio-8080-exec-7] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2020-11-10 14:50:27.299 ERROR 4628 --- [http-nio-8080-exec-7] c.l.handler.ControllerExceptionHandler   : Requst URL : http://localhost:8080/types/-1，Exception : {}
+
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at com.lhy.web.TypeShowController.types(TypeShowController.java:33)
+	at com.lhy.web.TypeShowController$$FastClassBySpringCGLIB$$1cd76c6b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at com.lhy.web.TypeShowController$$EnhancerBySpringCGLIB$$c1749887.types(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1457)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-11-10 14:50:27.300  WARN 4628 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved exception caused by Handler execution: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+2020-11-10 14:50:27.333  WARN 4628 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/typo.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:27.334  WARN 4628 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/animate.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:27.337  WARN 4628 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:27.337  WARN 4628 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/me.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:27.337  WARN 4628 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:27.361  WARN 4628 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/images/wechat.jpg] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:28.216  INFO 4628 --- [http-nio-8080-exec-5] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2020-11-10 14:50:28.219 ERROR 4628 --- [http-nio-8080-exec-5] c.l.handler.ControllerExceptionHandler   : Requst URL : http://localhost:8080/types/-1，Exception : {}
+
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at com.lhy.web.TypeShowController.types(TypeShowController.java:33)
+	at com.lhy.web.TypeShowController$$FastClassBySpringCGLIB$$1cd76c6b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at com.lhy.web.TypeShowController$$EnhancerBySpringCGLIB$$c1749887.types(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1457)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-11-10 14:50:28.220  WARN 4628 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved exception caused by Handler execution: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+2020-11-10 14:50:28.251  WARN 4628 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/typo.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:28.251  WARN 4628 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/animate.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:28.255  WARN 4628 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:28.256  WARN 4628 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:28.256  WARN 4628 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/me.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:28.274  WARN 4628 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/images/wechat.jpg] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:32.451  INFO 4628 --- [http-nio-8080-exec-3] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2020-11-10 14:50:32.455 ERROR 4628 --- [http-nio-8080-exec-3] c.l.handler.ControllerExceptionHandler   : Requst URL : http://localhost:8080/tags/-1，Exception : {}
+
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at com.lhy.web.TagShowController.tags(TagShowController.java:31)
+	at com.lhy.web.TagShowController$$FastClassBySpringCGLIB$$2f8a999b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at com.lhy.web.TagShowController$$EnhancerBySpringCGLIB$$c59bde17.tags(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1457)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-11-10 14:50:32.455  WARN 4628 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved exception caused by Handler execution: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+2020-11-10 14:50:32.489  WARN 4628 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/typo.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:32.491  WARN 4628 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/animate.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:32.494  WARN 4628 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:32.495  WARN 4628 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:32.497  WARN 4628 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/me.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:32.498  WARN 4628 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/images/wechat.jpg] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:33.071  INFO 4628 --- [http-nio-8080-exec-2] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.ArchiveShowController.archives', args=[{}]}
+2020-11-10 14:50:33.078  INFO 4628 --- [http-nio-8080-exec-2] com.lhy.aspect.LogAspect                 : Result : archives
+2020-11-10 14:50:33.107  WARN 4628 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/typo.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:33.108  WARN 4628 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/animate.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:33.108  WARN 4628 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:33.111  WARN 4628 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:33.111  WARN 4628 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/me.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:33.138  WARN 4628 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:33.140  WARN 4628 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/qrcode/qrcode.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:33.140  WARN 4628 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:33.141  WARN 4628 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/images/wechat.jpg] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:33.142  WARN 4628 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/waypoints/jquery.waypoints.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:33.177  WARN 4628 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:33.183  WARN 4628 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:33.187  WARN 4628 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/qrcode/qrcode.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:33.191  WARN 4628 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/waypoints/jquery.waypoints.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:50:33.219  INFO 4628 --- [http-nio-8080-exec-5] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.IndexController.newblogs', args=[{}]}
+2020-11-10 14:50:33.220  INFO 4628 --- [http-nio-8080-exec-5] com.lhy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2020-11-10 14:51:42.492  INFO 4628 --- [http-nio-8080-exec-6] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-11-10 14:51:42.502  INFO 4628 --- [http-nio-8080-exec-6] com.lhy.aspect.LogAspect                 : Result : index
+2020-11-10 14:51:42.542  WARN 4628 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/typo.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:42.542  WARN 4628 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/animate.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:42.546  WARN 4628 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:42.547  WARN 4628 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:42.548  WARN 4628 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/me.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:42.575  WARN 4628 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:42.576  WARN 4628 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:42.577  WARN 4628 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/qrcode/qrcode.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:42.578  WARN 4628 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/waypoints/jquery.waypoints.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:42.581  WARN 4628 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/images/wechat.jpg] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:42.611  WARN 4628 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:42.620  WARN 4628 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:42.626  WARN 4628 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/qrcode/qrcode.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:42.634  WARN 4628 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/waypoints/jquery.waypoints.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:42.646  INFO 4628 --- [http-nio-8080-exec-5] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.IndexController.newblogs', args=[{}]}
+2020-11-10 14:51:42.648  INFO 4628 --- [http-nio-8080-exec-5] com.lhy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2020-11-10 14:51:53.147  WARN 4628 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/editormd/css/editormd.min.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:53.148  WARN 4628 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:53.147  WARN 4628 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/me.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:53.151  WARN 4628 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/qrcode/qrcode.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:53.151  WARN 4628 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:53.161  WARN 4628 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/waypoints/jquery.waypoints.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:53.193  WARN 4628 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:53.211  WARN 4628 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:53.216  WARN 4628 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/qrcode/qrcode.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:53.220  WARN 4628 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/waypoints/jquery.waypoints.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:55.394  WARN 4628 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/editormd/css/editormd.min.css;jsessionid=32DEB180ADB8771A5F4E507892C4A406] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:55.394  WARN 4628 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/me.css;jsessionid=32DEB180ADB8771A5F4E507892C4A406] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:55.415  WARN 4628 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.js;jsessionid=32DEB180ADB8771A5F4E507892C4A406] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:55.415  WARN 4628 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.min.js;jsessionid=32DEB180ADB8771A5F4E507892C4A406] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:55.417  WARN 4628 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/waypoints/jquery.waypoints.min.js;jsessionid=32DEB180ADB8771A5F4E507892C4A406] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:55.417  WARN 4628 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/qrcode/qrcode.min.js;jsessionid=32DEB180ADB8771A5F4E507892C4A406] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:55.418  WARN 4628 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/images/wechat.jpg;jsessionid=32DEB180ADB8771A5F4E507892C4A406] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:55.448  WARN 4628 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.js;jsessionid=32DEB180ADB8771A5F4E507892C4A406] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:55.452  WARN 4628 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.min.js;jsessionid=32DEB180ADB8771A5F4E507892C4A406] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:55.457  WARN 4628 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/qrcode/qrcode.min.js;jsessionid=32DEB180ADB8771A5F4E507892C4A406] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:51:55.464  WARN 4628 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/waypoints/jquery.waypoints.min.js;jsessionid=32DEB180ADB8771A5F4E507892C4A406] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:52:07.661  WARN 4628 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/editormd/css/editormd.min.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 14:52:07.661  WARN 4628 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/me.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 15:06:30.884  INFO 9960 --- [restartedMain] com.lhy.BlogApplication                  : Starting BlogApplication on DESKTOP-RU465GV with PID 9960 (F:\SpringBootStudy\others\1\Blog\blog\target\classes started by Sky in F:\SpringBootStudy\others\1\Blog\blog)
+2020-11-10 15:06:30.885  INFO 9960 --- [restartedMain] com.lhy.BlogApplication                  : The following profiles are active: dev
+2020-11-10 15:06:31.149  INFO 9960 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75db523f: startup date [Tue Nov 10 15:06:31 CST 2020]; root of context hierarchy
+2020-11-10 15:06:32.903  INFO 9960 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2020-11-10 15:06:32.912  INFO 9960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-10 15:06:32.913  INFO 9960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-11-10 15:06:33.029  INFO 9960 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-10 15:06:33.029  INFO 9960 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1880 ms
+2020-11-10 15:06:33.224  INFO 9960 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-11-10 15:06:33.227  INFO 9960 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-11-10 15:06:33.228  INFO 9960 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-11-10 15:06:33.228  INFO 9960 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-11-10 15:06:33.228  INFO 9960 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-11-10 15:06:33.730  INFO 9960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-11-10 15:06:33.745  INFO 9960 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-11-10 15:06:33.864  INFO 9960 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2020-11-10 15:06:33.865  INFO 9960 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-11-10 15:06:33.866  INFO 9960 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2020-11-10 15:06:33.900  INFO 9960 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-11-10 15:06:34.024  INFO 9960 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-11-10 15:06:34.421  INFO 9960 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2020-11-10 15:06:34.717  INFO 9960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-10 15:06:35.047  INFO 9960 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-11-10 15:06:35.885  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75db523f: startup date [Tue Nov 10 15:06:31 CST 2020]; root of context hierarchy
+2020-11-10 15:06:35.949  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/about],methods=[GET]}" onto public java.lang.String com.lhy.web.AboutShowController.about()
+2020-11-10 15:06:35.953  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 15:06:35.954  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.lhy.vo.BlogQuery,org.springframework.ui.Model)
+2020-11-10 15:06:35.954  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.BlogController.input(org.springframework.ui.Model)
+2020-11-10 15:06:35.954  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.BlogController.post(com.lhy.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
+2020-11-10 15:06:35.954  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.lhy.vo.BlogQuery,org.springframework.ui.Model)
+2020-11-10 15:06:35.955  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 15:06:35.956  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 15:06:35.956  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
+2020-11-10 15:06:35.956  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.LoginController.loginPage()
+2020-11-10 15:06:35.958  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 15:06:35.958  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TagController.input(org.springframework.ui.Model)
+2020-11-10 15:06:35.959  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.TagController.post(com.lhy.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 15:06:35.959  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-11-10 15:06:35.959  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.TagController.editPost(com.lhy.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 15:06:35.959  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 15:06:35.961  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 15:06:35.961  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-11-10 15:06:35.962  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TypeController.input(org.springframework.ui.Model)
+2020-11-10 15:06:35.962  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.TypeController.post(com.lhy.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 15:06:35.962  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.TypeController.editPost(com.lhy.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 15:06:35.962  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 15:06:35.964  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/archives],methods=[GET]}" onto public java.lang.String com.lhy.web.ArchiveShowController.archives(org.springframework.ui.Model)
+2020-11-10 15:06:35.965  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.lhy.web.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 15:06:35.965  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.lhy.web.CommentController.post(com.lhy.po.Comment,javax.servlet.http.HttpSession)
+2020-11-10 15:06:35.966  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.lhy.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-11-10 15:06:35.966  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.lhy.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
+2020-11-10 15:06:35.966  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.lhy.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 15:06:35.966  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.lhy.web.IndexController.newblogs(org.springframework.ui.Model)
+2020-11-10 15:06:35.967  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.lhy.web.TagShowController.tags(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
+2020-11-10 15:06:35.967  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.lhy.web.TypeShowController.types(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
+2020-11-10 15:06:35.969  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-11-10 15:06:35.970  INFO 9960 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-11-10 15:06:36.014  INFO 9960 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-11-10 15:06:36.014  INFO 9960 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-11-10 15:06:36.030  INFO 9960 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2020-11-10 15:06:36.051  INFO 9960 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-11-10 15:06:36.745  INFO 9960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-10 15:06:36.790  INFO 9960 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-11-10 15:06:36.839  INFO 9960 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2020-11-10 15:06:36.843  INFO 9960 --- [restartedMain] com.lhy.BlogApplication                  : Started BlogApplication in 6.426 seconds (JVM running for 8.388)
+2020-11-10 15:06:56.255  INFO 9960 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-11-10 15:06:56.255  INFO 9960 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-11-10 15:06:56.291  INFO 9960 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 36 ms
+2020-11-10 15:07:01.034  INFO 9960 --- [http-nio-8080-exec-2] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-11-10 15:07:01.094  WARN 9960 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2020-11-10 15:07:01.106  WARN 9960 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2020-11-10 15:07:01.112  INFO 9960 --- [http-nio-8080-exec-2] com.lhy.aspect.LogAspect                 : Result : index
+2020-11-10 15:07:01.652  WARN 9960 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/animate.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 15:07:01.652  WARN 9960 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/typo.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 15:07:01.655  WARN 9960 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 15:07:01.655  WARN 9960 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/css/me.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 15:07:01.655  WARN 9960 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.css] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 15:07:01.684  WARN 9960 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 15:07:01.732  WARN 9960 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/qrcode/qrcode.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 15:07:01.733  WARN 9960 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 15:07:01.733  WARN 9960 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/waypoints/jquery.waypoints.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 15:07:01.733  WARN 9960 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/images/wechat.jpg] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 15:07:01.842  WARN 9960 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/prism/prism.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 15:07:01.857  WARN 9960 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/tocbot/tocbot.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 15:07:01.865  WARN 9960 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/qrcode/qrcode.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 15:07:01.873  WARN 9960 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/lib/waypoints/jquery.waypoints.min.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-11-10 15:07:01.913  INFO 9960 --- [http-nio-8080-exec-7] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.IndexController.newblogs', args=[{}]}
+2020-11-10 15:07:01.917  INFO 9960 --- [http-nio-8080-exec-7] com.lhy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2020-11-10 15:22:12.251  INFO 13660 --- [restartedMain] com.lhy.BlogApplication                  : Starting BlogApplication on DESKTOP-RU465GV with PID 13660 (F:\SpringBootStudy\others\1\Blog\blog\target\classes started by Sky in F:\SpringBootStudy\others\1\Blog\blog)
+2020-11-10 15:22:12.252  INFO 13660 --- [restartedMain] com.lhy.BlogApplication                  : The following profiles are active: dev
+2020-11-10 15:22:12.631  INFO 13660 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@355415ea: startup date [Tue Nov 10 15:22:12 CST 2020]; root of context hierarchy
+2020-11-10 15:22:14.857  INFO 13660 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2020-11-10 15:22:14.868  INFO 13660 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-10 15:22:14.869  INFO 13660 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-11-10 15:22:15.001  INFO 13660 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-10 15:22:15.001  INFO 13660 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2370 ms
+2020-11-10 15:22:15.228  INFO 13660 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-11-10 15:22:15.234  INFO 13660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-11-10 15:22:15.234  INFO 13660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-11-10 15:22:15.234  INFO 13660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-11-10 15:22:15.234  INFO 13660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-11-10 15:22:15.762  INFO 13660 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-11-10 15:22:15.787  INFO 13660 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-11-10 15:22:15.907  INFO 13660 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2020-11-10 15:22:15.909  INFO 13660 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-11-10 15:22:15.910  INFO 13660 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2020-11-10 15:22:15.953  INFO 13660 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-11-10 15:22:16.106  INFO 13660 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-11-10 15:22:16.522  INFO 13660 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2020-11-10 15:22:16.768  INFO 13660 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-10 15:22:17.041  INFO 13660 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-11-10 15:22:17.847  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@355415ea: startup date [Tue Nov 10 15:22:12 CST 2020]; root of context hierarchy
+2020-11-10 15:22:17.918  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/about],methods=[GET]}" onto public java.lang.String com.lhy.web.AboutShowController.about()
+2020-11-10 15:22:17.924  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 15:22:17.925  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.lhy.vo.BlogQuery,org.springframework.ui.Model)
+2020-11-10 15:22:17.925  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.BlogController.input(org.springframework.ui.Model)
+2020-11-10 15:22:17.925  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.BlogController.post(com.lhy.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
+2020-11-10 15:22:17.925  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 15:22:17.925  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.lhy.vo.BlogQuery,org.springframework.ui.Model)
+2020-11-10 15:22:17.926  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
+2020-11-10 15:22:17.927  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.LoginController.loginPage()
+2020-11-10 15:22:17.927  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 15:22:17.930  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 15:22:17.930  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TagController.input(org.springframework.ui.Model)
+2020-11-10 15:22:17.931  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-11-10 15:22:17.931  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.TagController.post(com.lhy.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 15:22:17.932  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.TagController.editPost(com.lhy.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 15:22:17.932  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 15:22:17.934  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 15:22:17.935  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-11-10 15:22:17.935  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TypeController.input(org.springframework.ui.Model)
+2020-11-10 15:22:17.936  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.TypeController.post(com.lhy.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 15:22:17.936  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.TypeController.editPost(com.lhy.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 15:22:17.936  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 15:22:17.938  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/archives],methods=[GET]}" onto public java.lang.String com.lhy.web.ArchiveShowController.archives(org.springframework.ui.Model)
+2020-11-10 15:22:17.939  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.lhy.web.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 15:22:17.939  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.lhy.web.CommentController.post(com.lhy.po.Comment,javax.servlet.http.HttpSession)
+2020-11-10 15:22:17.941  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.lhy.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-11-10 15:22:17.941  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.lhy.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
+2020-11-10 15:22:17.941  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.lhy.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 15:22:17.941  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.lhy.web.IndexController.newblogs(org.springframework.ui.Model)
+2020-11-10 15:22:17.941  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.lhy.web.TagShowController.tags(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
+2020-11-10 15:22:17.942  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.lhy.web.TypeShowController.types(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
+2020-11-10 15:22:17.943  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-11-10 15:22:17.944  INFO 13660 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-11-10 15:22:18.000  INFO 13660 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-11-10 15:22:18.000  INFO 13660 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-11-10 15:22:18.023  INFO 13660 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2020-11-10 15:22:18.052  INFO 13660 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-11-10 15:22:18.742  INFO 13660 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-10 15:22:18.784  INFO 13660 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-11-10 15:22:18.831  INFO 13660 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2020-11-10 15:22:18.836  INFO 13660 --- [restartedMain] com.lhy.BlogApplication                  : Started BlogApplication in 7.157 seconds (JVM running for 9.412)
+2020-11-10 15:22:30.449  INFO 13660 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-11-10 15:22:30.449  INFO 13660 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-11-10 15:22:30.487  INFO 13660 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 38 ms
+2020-11-10 15:22:30.524  INFO 13660 --- [http-nio-8080-exec-1] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-11-10 15:22:30.589  WARN 13660 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2020-11-10 15:22:30.603  WARN 13660 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2020-11-10 15:22:30.610  INFO 13660 --- [http-nio-8080-exec-1] com.lhy.aspect.LogAspect                 : Result : index
+2020-11-10 15:22:31.679  INFO 13660 --- [http-nio-8080-exec-8] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.IndexController.newblogs', args=[{}]}
+2020-11-10 15:22:31.682  INFO 13660 --- [http-nio-8080-exec-8] com.lhy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2020-11-10 15:22:34.739  INFO 13660 --- [http-nio-8080-exec-9] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/about', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.AboutShowController.about', args=[]}
+2020-11-10 15:22:34.743  INFO 13660 --- [http-nio-8080-exec-9] com.lhy.aspect.LogAspect                 : Result : about
+2020-11-10 15:22:35.245  INFO 13660 --- [http-nio-8080-exec-5] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.IndexController.newblogs', args=[{}]}
+2020-11-10 15:22:35.247  INFO 13660 --- [http-nio-8080-exec-5] com.lhy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2020-11-10 15:24:42.141  INFO 13660 --- [http-nio-8080-exec-2] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/about', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.AboutShowController.about', args=[]}
+2020-11-10 15:24:42.141  INFO 13660 --- [http-nio-8080-exec-2] com.lhy.aspect.LogAspect                 : Result : about
+2020-11-10 15:24:42.680  INFO 13660 --- [http-nio-8080-exec-6] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.IndexController.newblogs', args=[{}]}
+2020-11-10 15:24:42.683  INFO 13660 --- [http-nio-8080-exec-6] com.lhy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2020-11-10 15:25:18.966  INFO 11764 --- [restartedMain] com.lhy.BlogApplication                  : Starting BlogApplication on DESKTOP-RU465GV with PID 11764 (F:\SpringBootStudy\others\1\Blog\blog\target\classes started by Sky in F:\SpringBootStudy\others\1\Blog\blog)
+2020-11-10 15:25:18.967  INFO 11764 --- [restartedMain] com.lhy.BlogApplication                  : The following profiles are active: dev
+2020-11-10 15:25:19.201  INFO 11764 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5879d5be: startup date [Tue Nov 10 15:25:19 CST 2020]; root of context hierarchy
+2020-11-10 15:25:20.982  INFO 11764 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2020-11-10 15:25:20.992  INFO 11764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-10 15:25:20.993  INFO 11764 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-11-10 15:25:21.117  INFO 11764 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-10 15:25:21.117  INFO 11764 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1917 ms
+2020-11-10 15:25:21.336  INFO 11764 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-11-10 15:25:21.339  INFO 11764 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-11-10 15:25:21.340  INFO 11764 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-11-10 15:25:21.340  INFO 11764 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-11-10 15:25:21.340  INFO 11764 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-11-10 15:25:21.852  INFO 11764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-11-10 15:25:21.864  INFO 11764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-11-10 15:25:21.986  INFO 11764 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2020-11-10 15:25:21.987  INFO 11764 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-11-10 15:25:21.988  INFO 11764 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2020-11-10 15:25:22.024  INFO 11764 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-11-10 15:25:22.162  INFO 11764 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-11-10 15:25:22.585  INFO 11764 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2020-11-10 15:25:22.849  INFO 11764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-10 15:25:23.122  INFO 11764 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-11-10 15:25:23.897  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5879d5be: startup date [Tue Nov 10 15:25:19 CST 2020]; root of context hierarchy
+2020-11-10 15:25:23.960  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/about],methods=[GET]}" onto public java.lang.String com.lhy.web.AboutShowController.about()
+2020-11-10 15:25:23.964  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 15:25:23.965  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.lhy.vo.BlogQuery,org.springframework.ui.Model)
+2020-11-10 15:25:23.965  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.BlogController.input(org.springframework.ui.Model)
+2020-11-10 15:25:23.965  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.BlogController.post(com.lhy.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
+2020-11-10 15:25:23.965  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.lhy.vo.BlogQuery,org.springframework.ui.Model)
+2020-11-10 15:25:23.966  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 15:25:23.967  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 15:25:23.967  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
+2020-11-10 15:25:23.967  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.LoginController.loginPage()
+2020-11-10 15:25:23.970  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 15:25:23.970  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TagController.input(org.springframework.ui.Model)
+2020-11-10 15:25:23.970  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.TagController.post(com.lhy.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 15:25:23.971  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-11-10 15:25:23.971  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.TagController.editPost(com.lhy.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 15:25:23.971  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 15:25:23.973  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 15:25:23.974  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-11-10 15:25:23.974  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TypeController.input(org.springframework.ui.Model)
+2020-11-10 15:25:23.974  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.TypeController.post(com.lhy.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 15:25:23.974  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.TypeController.editPost(com.lhy.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 15:25:23.974  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 15:25:23.976  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/archives],methods=[GET]}" onto public java.lang.String com.lhy.web.ArchiveShowController.archives(org.springframework.ui.Model)
+2020-11-10 15:25:23.977  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.lhy.web.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 15:25:23.977  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.lhy.web.CommentController.post(com.lhy.po.Comment,javax.servlet.http.HttpSession)
+2020-11-10 15:25:23.978  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.lhy.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-11-10 15:25:23.978  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.lhy.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
+2020-11-10 15:25:23.979  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.lhy.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 15:25:23.979  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.lhy.web.IndexController.newblogs(org.springframework.ui.Model)
+2020-11-10 15:25:23.979  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.lhy.web.TagShowController.tags(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
+2020-11-10 15:25:23.980  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.lhy.web.TypeShowController.types(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
+2020-11-10 15:25:23.981  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-11-10 15:25:23.981  INFO 11764 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-11-10 15:25:24.038  INFO 11764 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-11-10 15:25:24.038  INFO 11764 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-11-10 15:25:24.056  INFO 11764 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2020-11-10 15:25:24.078  INFO 11764 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-11-10 15:25:24.959  INFO 11764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-10 15:25:25.007  INFO 11764 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-11-10 15:25:25.069  INFO 11764 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2020-11-10 15:25:25.074  INFO 11764 --- [restartedMain] com.lhy.BlogApplication                  : Started BlogApplication in 6.626 seconds (JVM running for 8.589)
+2020-11-10 15:25:33.948  INFO 11764 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-11-10 15:25:33.948  INFO 11764 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-11-10 15:25:33.992  INFO 11764 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 44 ms
+2020-11-10 15:25:34.026  INFO 11764 --- [http-nio-8080-exec-1] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-11-10 15:25:34.082  WARN 11764 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2020-11-10 15:25:34.092  WARN 11764 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2020-11-10 15:25:34.097  INFO 11764 --- [http-nio-8080-exec-1] com.lhy.aspect.LogAspect                 : Result : index
+2020-11-10 15:25:35.025  INFO 11764 --- [http-nio-8080-exec-3] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.IndexController.newblogs', args=[{}]}
+2020-11-10 15:25:35.028  INFO 11764 --- [http-nio-8080-exec-3] com.lhy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2020-11-10 15:25:36.770  INFO 11764 --- [http-nio-8080-exec-8] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/about', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.AboutShowController.about', args=[]}
+2020-11-10 15:25:36.775  INFO 11764 --- [http-nio-8080-exec-8] com.lhy.aspect.LogAspect                 : Result : about
+2020-11-10 15:25:37.202  INFO 11764 --- [http-nio-8080-exec-6] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.IndexController.newblogs', args=[{}]}
+2020-11-10 15:25:37.206  INFO 11764 --- [http-nio-8080-exec-6] com.lhy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2020-11-10 16:07:53.853  INFO 2000 --- [restartedMain] com.lhy.BlogApplication                  : Starting BlogApplication on DESKTOP-RU465GV with PID 2000 (F:\SpringBootStudy\others\1\Blog\blog\target\classes started by Sky in F:\SpringBootStudy\others\1\Blog\blog)
+2020-11-10 16:07:53.855  INFO 2000 --- [restartedMain] com.lhy.BlogApplication                  : The following profiles are active: dev
+2020-11-10 16:07:54.195  INFO 2000 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4d1b218f: startup date [Tue Nov 10 16:07:54 CST 2020]; root of context hierarchy
+2020-11-10 16:07:57.097  INFO 2000 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2020-11-10 16:07:57.112  INFO 2000 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-10 16:07:57.113  INFO 2000 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-11-10 16:07:57.260  INFO 2000 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-10 16:07:57.260  INFO 2000 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3065 ms
+2020-11-10 16:07:57.560  INFO 2000 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-11-10 16:07:57.565  INFO 2000 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-11-10 16:07:57.566  INFO 2000 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-11-10 16:07:57.567  INFO 2000 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-11-10 16:07:57.567  INFO 2000 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-11-10 16:07:58.351  INFO 2000 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-11-10 16:07:58.368  INFO 2000 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-11-10 16:07:58.537  INFO 2000 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2020-11-10 16:07:58.539  INFO 2000 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-11-10 16:07:58.541  INFO 2000 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2020-11-10 16:07:58.590  INFO 2000 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-11-10 16:07:58.749  INFO 2000 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-11-10 16:07:59.635  INFO 2000 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2020-11-10 16:08:00.107  INFO 2000 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-10 16:08:00.610  INFO 2000 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-11-10 16:08:01.759  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4d1b218f: startup date [Tue Nov 10 16:07:54 CST 2020]; root of context hierarchy
+2020-11-10 16:08:01.861  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/about],methods=[GET]}" onto public java.lang.String com.lhy.web.AboutShowController.about()
+2020-11-10 16:08:01.867  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/delete],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.BlogController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 16:08:01.867  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/search],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.BlogController.search(org.springframework.data.domain.Pageable,com.lhy.vo.BlogQuery,org.springframework.ui.Model)
+2020-11-10 16:08:01.868  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.BlogController.input(org.springframework.ui.Model)
+2020-11-10 16:08:01.868  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.BlogController.post(com.lhy.po.Blog,org.springframework.web.servlet.mvc.support.RedirectAttributes,javax.servlet.http.HttpSession)
+2020-11-10 16:08:01.868  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs/{id}/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.BlogController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 16:08:01.868  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.BlogController.blogs(org.springframework.data.domain.Pageable,com.lhy.vo.BlogQuery,org.springframework.ui.Model)
+2020-11-10 16:08:01.869  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
+2020-11-10 16:08:01.870  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.LoginController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 16:08:01.872  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.LoginController.loginPage()
+2020-11-10 16:08:01.873  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 16:08:01.874  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TagController.input(org.springframework.ui.Model)
+2020-11-10 16:08:01.874  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-11-10 16:08:01.875  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.TagController.post(com.lhy.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 16:08:01.875  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 16:08:01.875  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.TagController.editPost(com.lhy.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 16:08:01.877  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TypeController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 16:08:01.877  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TypeController.types(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-11-10 16:08:01.877  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TypeController.input(org.springframework.ui.Model)
+2020-11-10 16:08:01.878  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.TypeController.post(com.lhy.po.Type,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 16:08:01.878  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.lhy.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 16:08:01.878  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.lhy.web.admin.TypeController.editPost(com.lhy.po.Type,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-11-10 16:08:01.880  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/archives],methods=[GET]}" onto public java.lang.String com.lhy.web.ArchiveShowController.archives(org.springframework.ui.Model)
+2020-11-10 16:08:01.881  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments/{blogId}],methods=[GET]}" onto public java.lang.String com.lhy.web.CommentController.comments(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 16:08:01.882  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comments],methods=[POST]}" onto public java.lang.String com.lhy.web.CommentController.post(com.lhy.po.Comment,javax.servlet.http.HttpSession)
+2020-11-10 16:08:01.883  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.lhy.web.IndexController.index(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2020-11-10 16:08:01.884  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[POST]}" onto public java.lang.String com.lhy.web.IndexController.search(org.springframework.data.domain.Pageable,java.lang.String,org.springframework.ui.Model)
+2020-11-10 16:08:01.884  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog/{id}],methods=[GET]}" onto public java.lang.String com.lhy.web.IndexController.blog(java.lang.Long,org.springframework.ui.Model)
+2020-11-10 16:08:01.885  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/footer/newblog],methods=[GET]}" onto public java.lang.String com.lhy.web.IndexController.newblogs(org.springframework.ui.Model)
+2020-11-10 16:08:01.885  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tags/{id}],methods=[GET]}" onto public java.lang.String com.lhy.web.TagShowController.tags(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
+2020-11-10 16:08:01.886  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/types/{id}],methods=[GET]}" onto public java.lang.String com.lhy.web.TypeShowController.types(org.springframework.data.domain.Pageable,java.lang.Long,org.springframework.ui.Model)
+2020-11-10 16:08:01.890  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-11-10 16:08:01.891  INFO 2000 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-11-10 16:08:01.969  INFO 2000 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-11-10 16:08:01.969  INFO 2000 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-11-10 16:08:02.003  INFO 2000 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2020-11-10 16:08:02.044  INFO 2000 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-11-10 16:08:02.892  INFO 2000 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-10 16:08:02.954  INFO 2000 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-11-10 16:08:03.020  INFO 2000 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2020-11-10 16:08:03.027  INFO 2000 --- [restartedMain] com.lhy.BlogApplication                  : Started BlogApplication in 9.847 seconds (JVM running for 12.462)
+2020-11-10 16:08:52.158  INFO 2000 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-11-10 16:08:52.159  INFO 2000 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-11-10 16:08:52.197  INFO 2000 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 38 ms
+2020-11-10 16:08:52.223  INFO 2000 --- [http-nio-8080-exec-1] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/about', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.AboutShowController.about', args=[]}
+2020-11-10 16:08:52.227  INFO 2000 --- [http-nio-8080-exec-1] com.lhy.aspect.LogAspect                 : Result : about
+2020-11-10 16:08:53.294  INFO 2000 --- [http-nio-8080-exec-3] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.IndexController.newblogs', args=[{}]}
+2020-11-10 16:08:53.342  INFO 2000 --- [http-nio-8080-exec-3] com.lhy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2020-11-10 16:09:38.775  INFO 2000 --- [http-nio-8080-exec-7] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2020-11-10 16:09:38.786  WARN 2000 --- [http-nio-8080-exec-7] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2020-11-10 16:09:38.793 ERROR 2000 --- [http-nio-8080-exec-7] c.l.handler.ControllerExceptionHandler   : Requst URL : http://localhost:8080/types/-1，Exception : {}
+
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at com.lhy.web.TypeShowController.types(TypeShowController.java:33)
+	at com.lhy.web.TypeShowController$$FastClassBySpringCGLIB$$1cd76c6b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at com.lhy.web.TypeShowController$$EnhancerBySpringCGLIB$$7d7ee52e.types(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1457)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-11-10 16:09:38.794  WARN 2000 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved exception caused by Handler execution: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+2020-11-10 16:09:39.990  INFO 2000 --- [http-nio-8080-exec-3] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-11-10 16:09:40.018  WARN 2000 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [null.size]; use collection function syntax instead [size(null)].
+2020-11-10 16:09:40.022  INFO 2000 --- [http-nio-8080-exec-3] com.lhy.aspect.LogAspect                 : Result : index
+2020-11-10 16:09:40.443  INFO 2000 --- [http-nio-8080-exec-9] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.IndexController.newblogs', args=[{}]}
+2020-11-10 16:09:40.445  INFO 2000 --- [http-nio-8080-exec-9] com.lhy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2020-11-10 16:09:46.081  INFO 2000 --- [http-nio-8080-exec-3] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2020-11-10 16:09:46.088 ERROR 2000 --- [http-nio-8080-exec-3] c.l.handler.ControllerExceptionHandler   : Requst URL : http://localhost:8080/tags/-1，Exception : {}
+
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at com.lhy.web.TagShowController.tags(TagShowController.java:31)
+	at com.lhy.web.TagShowController$$FastClassBySpringCGLIB$$2f8a999b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at com.lhy.web.TagShowController$$EnhancerBySpringCGLIB$$81a62abe.tags(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1457)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-11-10 16:09:46.089  WARN 2000 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved exception caused by Handler execution: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+2020-11-10 16:09:46.743  INFO 2000 --- [http-nio-8080-exec-5] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.ArchiveShowController.archives', args=[{}]}
+2020-11-10 16:09:46.756  INFO 2000 --- [http-nio-8080-exec-5] com.lhy.aspect.LogAspect                 : Result : archives
+2020-11-10 16:09:47.127  INFO 2000 --- [http-nio-8080-exec-10] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.IndexController.newblogs', args=[{}]}
+2020-11-10 16:09:47.128  INFO 2000 --- [http-nio-8080-exec-10] com.lhy.aspect.LogAspect                 : Result : _fragments :: newblogList
+2020-11-10 16:09:48.421  INFO 2000 --- [http-nio-8080-exec-5] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/about', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.AboutShowController.about', args=[]}
+2020-11-10 16:09:48.422  INFO 2000 --- [http-nio-8080-exec-5] com.lhy.aspect.LogAspect                 : Result : about
+2020-11-10 16:09:48.783  INFO 2000 --- [http-nio-8080-exec-9] com.lhy.aspect.LogAspect                 : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lhy.web.IndexController.newblogs', args=[{}]}
+2020-11-10 16:09:48.785  INFO 2000 --- [http-nio-8080-exec-9] com.lhy.aspect.LogAspect                 : Result : _fragments :: newblogList
